@@ -1,0 +1,15 @@
+import { CompoundCondition, FieldCondition, Comparable } from '@ucast/core';
+import { DynamoOperator } from './interpreter';
+export declare const eq: DynamoOperator<FieldCondition>;
+export declare const ne: DynamoOperator<FieldCondition>;
+export declare const lt: DynamoOperator<FieldCondition<Comparable>>;
+export declare const lte: DynamoOperator<FieldCondition<Comparable>>;
+export declare const gt: DynamoOperator<FieldCondition<Comparable>>;
+export declare const gte: DynamoOperator<FieldCondition<Comparable>>;
+export declare const exists: DynamoOperator<FieldCondition<Comparable>>;
+export declare const within: DynamoOperator<FieldCondition<unknown[]>>;
+export declare const nin: DynamoOperator<FieldCondition<unknown[]>>;
+export declare const not: DynamoOperator<CompoundCondition<import("@ucast/core").Condition<unknown>>>;
+export declare const and: DynamoOperator<CompoundCondition<import("@ucast/core").Condition<unknown>>>;
+export declare const or: DynamoOperator<CompoundCondition<import("@ucast/core").Condition<unknown>>>;
+export declare const nor: DynamoOperator<CompoundCondition<import("@ucast/core").Condition<unknown>>>;
